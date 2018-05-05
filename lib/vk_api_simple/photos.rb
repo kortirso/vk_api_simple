@@ -1,14 +1,14 @@
-require 'httparty'
+require 'net/http'
+require 'json'
+require_relative 'photos/get_upload_server'
 
 module VkApiSimple
   # Clients requests
-  class Client
-    include HTTParty
+  class Photos
+    include VkApiSimple::Photos::GetUploadServer
 
+    BASE_URI = 'https://api.vk.com/method/'.freeze
     VK_API_VERSION = '5.74'.freeze
-
-    base_uri 'https://api.vk.com/method/'
-    format :json
 
     attr_reader :token, :api_version
 
