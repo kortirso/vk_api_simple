@@ -2,7 +2,7 @@ require 'net/http/post/multipart'
 
 module VkApiSimple
   class Photos
-    # Returns server's url for uploading photo
+    # Upload image to server
     module UploadImage
       def upload_image(args = {})
         uri = URI(args[:url])
