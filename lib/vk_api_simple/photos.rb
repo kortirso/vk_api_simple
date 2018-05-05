@@ -1,11 +1,13 @@
 require 'net/http'
 require 'json'
 require_relative 'photos/get_upload_server'
+require_relative 'photos/upload_image'
 
 module VkApiSimple
   # Clients requests
   class Photos
     include VkApiSimple::Photos::GetUploadServer
+    include VkApiSimple::Photos::UploadImage
 
     BASE_URI = 'https://api.vk.com/method/'.freeze
     VK_API_VERSION = '5.74'.freeze
