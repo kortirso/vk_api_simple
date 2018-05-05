@@ -1,4 +1,4 @@
-require 'net/http'
+require 'rest-client'
 require 'json'
 require_relative 'photos/get_upload_server'
 require_relative 'photos/save'
