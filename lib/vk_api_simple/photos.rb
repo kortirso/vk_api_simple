@@ -3,6 +3,7 @@ require 'json'
 require_relative 'photos/get_market_upload_server'
 require_relative 'photos/get_upload_server'
 require_relative 'photos/save'
+require_relative 'photos/save_market_photo'
 require_relative 'photos/upload_image'
 
 module VkApiSimple
@@ -11,6 +12,7 @@ module VkApiSimple
     include VkApiSimple::Photos::GetMarketUploadServer
     include VkApiSimple::Photos::GetUploadServer
     include VkApiSimple::Photos::Save
+    include VkApiSimple::Photos::SaveMarketPhoto
     include VkApiSimple::Photos::UploadImage
 
     BASE_URI = 'https://api.vk.com/method/photos.'.freeze
