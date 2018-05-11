@@ -1,11 +1,13 @@
 require 'rest-client'
 require 'json'
 require_relative 'market/add'
+require_relative 'market/edit'
 
 module VkApiSimple
   # Market requests
   class Market
     include VkApiSimple::Market::Add
+    include VkApiSimple::Market::Edit
 
     BASE_URI = 'https://api.vk.com/method/market.'.freeze
     VK_API_VERSION = '5.74'.freeze
