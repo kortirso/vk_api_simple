@@ -1,6 +1,7 @@
 require 'rest-client'
 require 'json'
 require_relative 'photos/delete'
+require_relative 'photos/edit'
 require_relative 'photos/get_market_upload_server'
 require_relative 'photos/get_upload_server'
 require_relative 'photos/save'
@@ -11,6 +12,7 @@ module VkApiSimple
   # Clients requests
   class Photos
     include VkApiSimple::Photos::Delete
+    include VkApiSimple::Photos::Edit
     include VkApiSimple::Photos::GetMarketUploadServer
     include VkApiSimple::Photos::GetUploadServer
     include VkApiSimple::Photos::Save
