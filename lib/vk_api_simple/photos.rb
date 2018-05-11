@@ -5,6 +5,7 @@ require_relative 'photos/edit'
 require_relative 'photos/get'
 require_relative 'photos/get_market_upload_server'
 require_relative 'photos/get_upload_server'
+require_relative 'photos/move'
 require_relative 'photos/save'
 require_relative 'photos/save_market_photo'
 require_relative 'photos/upload_image'
@@ -17,6 +18,7 @@ module VkApiSimple
     include VkApiSimple::Photos::Get
     include VkApiSimple::Photos::GetMarketUploadServer
     include VkApiSimple::Photos::GetUploadServer
+    include VkApiSimple::Photos::Move
     include VkApiSimple::Photos::Save
     include VkApiSimple::Photos::SaveMarketPhoto
     include VkApiSimple::Photos::UploadImage
